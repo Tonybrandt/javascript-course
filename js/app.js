@@ -18,12 +18,12 @@ function seleccionarDias() {
     alert('Para seleccionar los días de su estadía, tenga en cuenta que puede ingresar desde el 11 hasta la fecha final del mes que seleccionó, los primeros 10 dias de cada mes de temporada ya están alquilados.')
     let dia = Number(prompt(`por favor ${nombre}, ingrese su día de llegada`))
 
-    while(isNaN(dia)){
+    while(isNaN(dia) || dia <= 11 || dia >= 32){
         dia = Number(prompt(`por favor ${nombre}, ingrese un número válido entre 11 y 31.`))
     }
-    if(dia >= 11 || dia <=20){
+    if(dia <=20){
         alert(`Excelente ${nombre}, te esperamos a mediados del mes`)
-    }else if (dia >= 21 || dia <= 31){
+    }else if (dia >= 21){
         alert(`Excelente ${nombre}, te esperamos a finales del mes`)
     }else {
         alert(`El número que ingreso no es válido`)
