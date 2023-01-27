@@ -146,6 +146,26 @@ function buscarHuesped(array){
     }
 }
 
+// Funcion para ordenar los huespedes por orden alfabético
+
+
+function ordenarHuespedes(arr){
+    const ordenadoAlfabeticamente = [].concat(arr)
+    //ordenar algo que tiene un dato string
+    //forma de la a-z ascendente
+    ordenadoAlfabeticamente.sort((a, b) => {
+        if (a.nombre > b.nombre) {
+          return 1
+        }
+        if (a.nombre < b.nombre) {
+          return -1
+        }
+        // a es igual b
+        return 0
+      })
+      mostrarHuesped(ordenadoAlfabeticamente)
+}
+
  function seleccionarDias() {
     alert('Para seleccionar los días de su estadía, tenga en cuenta que puede ingresar desde el 11 hasta la fecha final del mes que seleccionó, los primeros 10 dias de cada mes de temporada ya están alquilados.')
     let dia = Number(prompt(`por favor ${nombre}, ingrese su día de llegada`))
@@ -216,7 +236,8 @@ function consulta() {
             4 - seleccionar mes y días de estadía
             5 - Añadir extras
             6 - Mostrar reservas realizadas
-            7 - Terminar reserva`))
+            7 - Mostrar huespedes por orden alfabético
+            8 - Terminar reserva`))
 
             switch(opciones){
                 case 1:
@@ -249,6 +270,9 @@ function consulta() {
                     mostrarReservas(reservasRealizadas);
                 break
                 case 7:
+                    ordenarHuespedes(huespedes)
+                break
+                case 8:
                     console.log("Gracias por visitarnos!");
                     salir = true
                     return salir
