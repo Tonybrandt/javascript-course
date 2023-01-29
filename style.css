@@ -1,0 +1,92 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fonts: rgb(237, 237, 237);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(10, 30, 13, 0.45), rgba(30, 62, 8, 0.4)), url('assets/frente1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0.1px;
+}
+
+.container {
+    height: calc(100vh - 40px);
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 95%;
+    border: 3px solid var(--fonts);
+    border-radius: 3rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+    background: url('assets/frente1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.nav {
+    background: linear-gradient(to right, rgba(7, 28, 10, 0.482), rgba(23, 47, 8, 0.473));
+    margin: auto;
+    height: 80px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--fonts);
+}
+
+.logo {
+    font-size: 27px;
+    color: var(--fonts);
+    font-weight: 700;
+    margin-right: 60px;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav__list_item {
+    color: var(--fonts);
+    margin: 0 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cta {
+    background-color: var(--fonts);
+    padding: 15px 30px;
+    color: black;
+    text-decoration: none;
+    border-radius: 2rem;
+    font-size: 18px;
+}
+
+.fa-whatsapp {
+    font-size: 22px;
+}
+
+.nightMode {
+    background-color: rgb(69, 69, 69);
+    padding: 15px 17px;
+    border: none;
+    margin-left: 5px;
+    border-radius: 50%;
+    color: var(--fonts);
+}
